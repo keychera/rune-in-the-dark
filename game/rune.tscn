@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsrnnthpa65u6"]
+
+[ext_resource type="Script" path="res://game/rune.gd" id="1_q4knn"]
+
+[node name="Rune" type="Button"]
+custom_minimum_size = Vector2(60, 60)
+text = "A"
+script = ExtResource("1_q4knn")

@@ -1,0 +1,126 @@
+[gd_scene load_steps=3 format=3 uid="uid://64hydpvq3l7y"]
+
+[ext_resource type="Script" path="res://game/runeboard.gd" id="1_2oehf"]
+[ext_resource type="PackedScene" uid="uid://bsrnnthpa65u6" path="res://game/rune.tscn" id="2_ji5dw"]
+
+[node name="Node" type="Node"]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="runeboard" type="GridContainer" parent="CenterContainer"]
+layout_mode = 2
+columns = 6
+script = ExtResource("1_2oehf")
+
+[node name="rune" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune2" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune3" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune4" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune5" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune6" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune7" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune8" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune9" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune10" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune11" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune12" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune13" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune14" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune15" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune16" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune17" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune18" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune19" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune20" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune21" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune22" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune23" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune24" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune25" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune26" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune27" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune28" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune29" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune30" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune31" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune32" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune33" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune34" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune35" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
+
+[node name="rune36" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+layout_mode = 2
