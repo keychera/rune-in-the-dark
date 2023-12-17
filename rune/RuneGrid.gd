@@ -45,7 +45,7 @@ func toggle_rune_neighbor(rune: Runestone, active: bool):
 #	print(str(left ,"  ", order, "  ", right))
 #	print(str("   ", below, "   "))
 
-	var id = rune.get_instance_id()
+	var id = rune.order
 	if active:
 		if above >= 0:
 			(get_child(above) as Runestone).side_glow(id, Vector2(0., 1.))
@@ -66,24 +66,26 @@ func toggle_rune_neighbor(rune: Runestone, active: bool):
 			(get_child(left) as Runestone).deglow(id)
 
 func _on_rune_click(rune: Runestone):
-	rune.toggle_active()
-	toggle_rune_neighbor(rune, rune.active)
-
 	if (prev != null):
-		if(prev.get_instance_id() != rune.get_instance_id()):
+		if(prev.order != rune.order):
 			if (prev.symbol_n == rune.symbol_n):
 				prev.toggle_done()
+				rune.toggle_active()
+				toggle_rune_neighbor(rune, rune.active)
 				rune.toggle_done()
 			else:
-				prev.toggle_active()
-				rune.toggle_active()
+				prev.toggle_active(false)
+				rune.toggle_active(false)
 				toggle_rune_neighbor(prev, false)
-				toggle_rune_neighbor(rune, false)
 			prev = null
 		else:
+			rune.toggle_active()
+			toggle_rune_neighbor(rune, rune.active)
 			if !prev.active:
 				prev = null
 	else:
+		rune.toggle_active()
+		toggle_rune_neighbor(rune, rune.active)
 		prev = rune
 
 func _on_restart_button_button_up():
@@ -99,12 +101,10 @@ func _on_restart_button_button_up():
 		var symbol_n = floor(n/2)
 		var rand_symbol = symbols[symbol_idxs[symbol_n % symbols.size()]]
 		rune.set_symbol(rand_symbol)
-		if(rune.active):
-			rune.toggle_active()
-			toggle_rune_neighbor(rune, false)
-		else:
-			rune.toggle_active(false)
+		rune.toggle_active(false)
 		rune.toggle_done(false)
+		rune.light_sources.clear()
+		rune.mat.set_shader_parameter("pos2", Vector2(100, 100))
 	
 	prev = null
 	
