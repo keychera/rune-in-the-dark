@@ -1,9 +1,706 @@
-[gd_scene load_steps=3 format=3 uid="uid://64hydpvq3l7y"]
+[gd_scene load_steps=77 format=3 uid="uid://64hydpvq3l7y"]
 
 [ext_resource type="Script" path="res://game/runeboard.gd" id="1_2oehf"]
+[ext_resource type="Script" path="res://game/darkness.gd" id="2_aano1"]
 [ext_resource type="PackedScene" uid="uid://bsrnnthpa65u6" path="res://game/rune.tscn" id="2_ji5dw"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p646t"]
+
+[sub_resource type="Shader" id="Shader_e562u"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5rcbi"]
+resource_local_to_scene = true
+shader = SubResource("Shader_e562u")
+shader_parameter/mouse = Vector2(166.51, -189.612)
+
+[sub_resource type="Shader" id="Shader_806hu"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_381d7"]
+resource_local_to_scene = true
+shader = SubResource("Shader_806hu")
+shader_parameter/mouse = Vector2(102.51, -189.612)
+
+[sub_resource type="Shader" id="Shader_2wjba"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1xof6"]
+resource_local_to_scene = true
+shader = SubResource("Shader_2wjba")
+shader_parameter/mouse = Vector2(38.5098, -189.612)
+
+[sub_resource type="Shader" id="Shader_ln5xu"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gymtb"]
+resource_local_to_scene = true
+shader = SubResource("Shader_ln5xu")
+shader_parameter/mouse = Vector2(-25.4902, -189.612)
+
+[sub_resource type="Shader" id="Shader_u4yis"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2o3p1"]
+resource_local_to_scene = true
+shader = SubResource("Shader_u4yis")
+shader_parameter/mouse = Vector2(-89.4902, -189.612)
+
+[sub_resource type="Shader" id="Shader_03cq4"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_56emd"]
+resource_local_to_scene = true
+shader = SubResource("Shader_03cq4")
+shader_parameter/mouse = Vector2(-153.49, -189.612)
+
+[sub_resource type="Shader" id="Shader_fkppm"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wfiij"]
+resource_local_to_scene = true
+shader = SubResource("Shader_fkppm")
+shader_parameter/mouse = Vector2(166.51, -253.612)
+
+[sub_resource type="Shader" id="Shader_q15p1"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_beaie"]
+resource_local_to_scene = true
+shader = SubResource("Shader_q15p1")
+shader_parameter/mouse = Vector2(102.51, -253.612)
+
+[sub_resource type="Shader" id="Shader_v48k0"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vu0lj"]
+resource_local_to_scene = true
+shader = SubResource("Shader_v48k0")
+shader_parameter/mouse = Vector2(38.5098, -253.612)
+
+[sub_resource type="Shader" id="Shader_626wi"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5rt8n"]
+resource_local_to_scene = true
+shader = SubResource("Shader_626wi")
+shader_parameter/mouse = Vector2(-25.4902, -253.612)
+
+[sub_resource type="Shader" id="Shader_t2qp1"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mwdws"]
+resource_local_to_scene = true
+shader = SubResource("Shader_t2qp1")
+shader_parameter/mouse = Vector2(-89.4902, -253.612)
+
+[sub_resource type="Shader" id="Shader_8xny0"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ovmht"]
+resource_local_to_scene = true
+shader = SubResource("Shader_8xny0")
+shader_parameter/mouse = Vector2(-153.49, -253.612)
+
+[sub_resource type="Shader" id="Shader_r3wja"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_st3q4"]
+resource_local_to_scene = true
+shader = SubResource("Shader_r3wja")
+shader_parameter/mouse = Vector2(166.51, -317.612)
+
+[sub_resource type="Shader" id="Shader_r7maw"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_05866"]
+resource_local_to_scene = true
+shader = SubResource("Shader_r7maw")
+shader_parameter/mouse = Vector2(102.51, -317.612)
+
+[sub_resource type="Shader" id="Shader_bbsen"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r7tp1"]
+resource_local_to_scene = true
+shader = SubResource("Shader_bbsen")
+shader_parameter/mouse = Vector2(38.5098, -317.612)
+
+[sub_resource type="Shader" id="Shader_p6vko"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lnwj4"]
+resource_local_to_scene = true
+shader = SubResource("Shader_p6vko")
+shader_parameter/mouse = Vector2(-25.4902, -317.612)
+
+[sub_resource type="Shader" id="Shader_pl4k5"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_khtb3"]
+resource_local_to_scene = true
+shader = SubResource("Shader_pl4k5")
+shader_parameter/mouse = Vector2(-89.4902, -317.612)
+
+[sub_resource type="Shader" id="Shader_qol4g"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uoba0"]
+resource_local_to_scene = true
+shader = SubResource("Shader_qol4g")
+shader_parameter/mouse = Vector2(-153.49, -317.612)
+
+[sub_resource type="Shader" id="Shader_tkyot"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_20msb"]
+resource_local_to_scene = true
+shader = SubResource("Shader_tkyot")
+shader_parameter/mouse = Vector2(166.51, -381.612)
+
+[sub_resource type="Shader" id="Shader_lncn0"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1htc6"]
+resource_local_to_scene = true
+shader = SubResource("Shader_lncn0")
+shader_parameter/mouse = Vector2(102.51, -381.612)
+
+[sub_resource type="Shader" id="Shader_smi23"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vhgbg"]
+resource_local_to_scene = true
+shader = SubResource("Shader_smi23")
+shader_parameter/mouse = Vector2(38.5098, -381.612)
+
+[sub_resource type="Shader" id="Shader_h8g43"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_img8d"]
+resource_local_to_scene = true
+shader = SubResource("Shader_h8g43")
+shader_parameter/mouse = Vector2(-25.4902, -381.612)
+
+[sub_resource type="Shader" id="Shader_f4o34"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l1pch"]
+resource_local_to_scene = true
+shader = SubResource("Shader_f4o34")
+shader_parameter/mouse = Vector2(-89.4902, -381.612)
+
+[sub_resource type="Shader" id="Shader_fxlmv"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ec0i3"]
+resource_local_to_scene = true
+shader = SubResource("Shader_fxlmv")
+shader_parameter/mouse = Vector2(-153.49, -381.612)
+
+[sub_resource type="Shader" id="Shader_ptamj"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tgs7g"]
+resource_local_to_scene = true
+shader = SubResource("Shader_ptamj")
+shader_parameter/mouse = Vector2(166.51, -445.612)
+
+[sub_resource type="Shader" id="Shader_qa1f3"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_18jx0"]
+resource_local_to_scene = true
+shader = SubResource("Shader_qa1f3")
+shader_parameter/mouse = Vector2(102.51, -445.612)
+
+[sub_resource type="Shader" id="Shader_p7m2f"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1xgd0"]
+resource_local_to_scene = true
+shader = SubResource("Shader_p7m2f")
+shader_parameter/mouse = Vector2(38.5098, -445.612)
+
+[sub_resource type="Shader" id="Shader_djq5i"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2hqyp"]
+resource_local_to_scene = true
+shader = SubResource("Shader_djq5i")
+shader_parameter/mouse = Vector2(-25.4902, -445.612)
+
+[sub_resource type="Shader" id="Shader_y8yjg"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xh3kf"]
+resource_local_to_scene = true
+shader = SubResource("Shader_y8yjg")
+shader_parameter/mouse = Vector2(-89.4902, -445.612)
+
+[sub_resource type="Shader" id="Shader_p2tg6"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_adsr6"]
+resource_local_to_scene = true
+shader = SubResource("Shader_p2tg6")
+shader_parameter/mouse = Vector2(-153.49, -445.612)
+
+[sub_resource type="Shader" id="Shader_ehbiq"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n56n3"]
+resource_local_to_scene = true
+shader = SubResource("Shader_ehbiq")
+shader_parameter/mouse = Vector2(166.51, -509.612)
+
+[sub_resource type="Shader" id="Shader_svsx0"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e4sfm"]
+resource_local_to_scene = true
+shader = SubResource("Shader_svsx0")
+shader_parameter/mouse = Vector2(102.51, -509.612)
+
+[sub_resource type="Shader" id="Shader_b3v8b"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a3gg4"]
+resource_local_to_scene = true
+shader = SubResource("Shader_b3v8b")
+shader_parameter/mouse = Vector2(38.5098, -509.612)
+
+[sub_resource type="Shader" id="Shader_71cun"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7yi2c"]
+resource_local_to_scene = true
+shader = SubResource("Shader_71cun")
+shader_parameter/mouse = Vector2(-25.4902, -509.612)
+
+[sub_resource type="Shader" id="Shader_rg0q3"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sqh6q"]
+resource_local_to_scene = true
+shader = SubResource("Shader_rg0q3")
+shader_parameter/mouse = Vector2(-89.4902, -509.612)
+
+[sub_resource type="Shader" id="Shader_3jp47"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 mouse; 
+
+void fragment() {
+	float hop = 2.;
+	vec2 m = floor(abs(mouse - 30.) * hop/60.) / hop;
+	float factor = 1. - clamp((m.x + m.y)/2., 0., 1.);
+	COLOR.rgb = vec3(0.2) * factor;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e6sgj"]
+resource_local_to_scene = true
+shader = SubResource("Shader_3jp47")
+shader_parameter/mouse = Vector2(-153.49, -509.612)
+
 [node name="Node" type="Node"]
+
+[node name="darkness" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_p646t")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("2_aano1")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchors_preset = 15
@@ -18,109 +715,145 @@ columns = 6
 script = ExtResource("1_2oehf")
 
 [node name="rune" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_5rcbi")
 layout_mode = 2
 
 [node name="rune2" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_381d7")
 layout_mode = 2
 
 [node name="rune3" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_1xof6")
 layout_mode = 2
 
 [node name="rune4" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_gymtb")
 layout_mode = 2
 
 [node name="rune5" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_2o3p1")
 layout_mode = 2
 
 [node name="rune6" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_56emd")
 layout_mode = 2
 
 [node name="rune7" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_wfiij")
 layout_mode = 2
 
 [node name="rune8" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_beaie")
 layout_mode = 2
 
 [node name="rune9" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_vu0lj")
 layout_mode = 2
 
 [node name="rune10" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_5rt8n")
 layout_mode = 2
 
 [node name="rune11" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_mwdws")
 layout_mode = 2
 
 [node name="rune12" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_ovmht")
 layout_mode = 2
 
 [node name="rune13" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_st3q4")
 layout_mode = 2
 
 [node name="rune14" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_05866")
 layout_mode = 2
 
 [node name="rune15" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_r7tp1")
 layout_mode = 2
 
 [node name="rune16" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_lnwj4")
 layout_mode = 2
 
 [node name="rune17" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_khtb3")
 layout_mode = 2
 
 [node name="rune18" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_uoba0")
 layout_mode = 2
 
 [node name="rune19" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_20msb")
 layout_mode = 2
 
 [node name="rune20" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_1htc6")
 layout_mode = 2
 
 [node name="rune21" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_vhgbg")
 layout_mode = 2
 
 [node name="rune22" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_img8d")
 layout_mode = 2
 
 [node name="rune23" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_l1pch")
 layout_mode = 2
 
 [node name="rune24" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_ec0i3")
 layout_mode = 2
 
 [node name="rune25" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_tgs7g")
 layout_mode = 2
 
 [node name="rune26" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_18jx0")
 layout_mode = 2
 
 [node name="rune27" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_1xgd0")
 layout_mode = 2
 
 [node name="rune28" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_2hqyp")
 layout_mode = 2
 
 [node name="rune29" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_xh3kf")
 layout_mode = 2
 
 [node name="rune30" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_adsr6")
 layout_mode = 2
 
 [node name="rune31" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_n56n3")
 layout_mode = 2
 
 [node name="rune32" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_e4sfm")
 layout_mode = 2
 
 [node name="rune33" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_a3gg4")
 layout_mode = 2
 
 [node name="rune34" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_7yi2c")
 layout_mode = 2
 
 [node name="rune35" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_sqh6q")
 layout_mode = 2
 
 [node name="rune36" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
+material = SubResource("ShaderMaterial_e6sgj")
 layout_mode = 2

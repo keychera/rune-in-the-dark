@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://g8umgl5843k"]
+
+[ext_resource type="Shader" path="res://rune/runestone.gdshader" id="1_2bgkf"]
+[ext_resource type="Texture2D" uid="uid://bi6ydmfsd08hk" path="res://rune/rune3.png" id="2_ughqd"]
+[ext_resource type="Texture2D" uid="uid://dfcltwy5mcs58" path="res://rune/rune2.png" id="2_xapxf"]
+[ext_resource type="Script" path="res://rune/Runestone.gd" id="3_tkhkk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3n3nq"]
+shader = ExtResource("1_2bgkf")
+shader_parameter/time = 0.760509
+shader_parameter/pos1 = Vector2(0.4, 0)
+shader_parameter/pos2 = Vector2(0.2, 0)
+shader_parameter/resolution = Vector2(180, 180)
+shader_parameter/mouse = Vector2(319.781, 189.105)
+shader_parameter/rune_m = ExtResource("2_xapxf")
+
+[node name="rune_tile" type="Node"]
+
+[node name="runestone" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_3n3nq")
+position = Vector2(88, 91)
+texture = ExtResource("2_ughqd")
+script = ExtResource("3_tkhkk")

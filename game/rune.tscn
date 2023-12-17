@@ -1,8 +1,32 @@
-[gd_scene load_steps=2 format=3 uid="uid://bsrnnthpa65u6"]
+[gd_scene load_steps=7 format=3 uid="uid://bsrnnthpa65u6"]
 
+[ext_resource type="Shader" path="res://game/rune.gdshader" id="1_6n41q"]
 [ext_resource type="Script" path="res://game/rune.gd" id="1_q4knn"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ypucg"]
+resource_local_to_scene = true
+shader = ExtResource("1_6n41q")
+shader_parameter/mouse = Vector2(125.229, 54.7863)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s7vmr"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwcki"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ch3vk"]
+bg_color = Color(0, 0, 0, 1)
+
 [node name="Rune" type="Button"]
+material = SubResource("ShaderMaterial_ypucg")
 custom_minimum_size = Vector2(60, 60)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_s7vmr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fwcki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ch3vk")
 text = "A"
 script = ExtResource("1_q4knn")
