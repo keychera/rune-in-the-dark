@@ -21,11 +21,15 @@ func _on_button_up():
 		light_up.restart()
 		light_up.emitting = true
 
+func side_glow():
+	mat.set_shader_parameter("pos1", Vector2(1., 0.))
+	mat.set_shader_parameter("pos2", Vector2(1., 0.) * 0.18)
+	mat.set_shader_parameter("time", 0.)
+
 #func _on_mouse_entered():
 #	mat.set_shader_parameter("pos1", mat.get_shader_parameter("pos2"))
 #	mat.set_shader_parameter("pos2", Vector2(0, 0))
 #	mat.set_shader_parameter("time", 0.)
-#
 #
 #func _on_mouse_exited():
 #	var original = get_local_mouse_position()

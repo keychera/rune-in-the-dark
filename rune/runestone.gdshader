@@ -30,7 +30,7 @@ void fragment() {
 	vec4 m_tex = texture(rune_m, UV);
 	
 	vec2 center = UV - 0.5;
-	float max_time = .5;
+	float max_time = .1;
 	float progress = clamp(time / max_time, 0., 1.);
 	vec2 pos = mix(pos1, pos2, easeOutExpo(progress));
 	float inner = circle(center + (0.002 * vec2(sin(time), cos(time))), pos, 0.165, 0.01);
