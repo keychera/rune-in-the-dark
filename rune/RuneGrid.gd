@@ -40,6 +40,11 @@ func toggle_rune_neighbor(rune: Runestone, active: bool):
 	var right = (order + 1)
 	right = right if right/columns == row else -1
 	
+#	print("toggling " + str(order) + " on row " + str(row))
+#	print(str("   ", above, "   "))
+#	print(str(left ,"  ", order, "  ", right))
+#	print(str("   ", below, "   "))
+
 	var id = rune.get_instance_id()
 	if active:
 		if above >= 0:
@@ -63,11 +68,6 @@ func toggle_rune_neighbor(rune: Runestone, active: bool):
 func _on_rune_click(rune: Runestone):
 	rune.toggle_active()
 	toggle_rune_neighbor(rune, rune.active)
-			
-#	print("clicking " + str(order) + " on row " + str(row))
-#	print(str("   ", above, "   "))
-#	print(str(left ,"  ", order, "  ", right))
-#	print(str("   ", below, "   "))
 
 	if (prev != null):
 		if(prev.get_instance_id() != rune.get_instance_id()):
@@ -85,4 +85,26 @@ func _on_rune_click(rune: Runestone):
 				prev = null
 	else:
 		prev = rune
+
+func _on_restart_button_button_up():
+	var n_child = get_child_count()
+	assert(n_child % 2 == 0)
+	var rune_idxs = range(n_child)
+	rune_idxs.shuffle()
+	var symbol_idxs = range(symbols.size())
+	symbol_idxs.shuffle()
+	for n in n_child:
+		var idx = rune_idxs[n]
+		var rune = get_child(idx) as Runestone
+		var symbol_n = floor(n/2)
+		var rand_symbol = symbols[symbol_idxs[symbol_n % symbols.size()]]
+		rune.set_symbol(rand_symbol)
+		if(rune.active):
+			rune.toggle_active()
+			toggle_rune_neighbor(rune, false)
+		else:
+			rune.toggle_active(false)
+		rune.toggle_done(false)
+	
+	prev = null
 	

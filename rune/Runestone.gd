@@ -27,17 +27,23 @@ func set_symbol(sym: int):
 	mat.set_shader_parameter("symbol_active", load(str("res://rune/symbols/", str(sym), "l.png")));
 	mat.set_shader_parameter("symbol", load(str("res://rune/symbols/", str(sym), ".png")));
 
-func toggle_active():
-	active = !active
+func toggle_active(force_state = null):
+	if force_state != null:
+		active = force_state
+	else:
+		active = !active
 	mat.set_shader_parameter("active", active)
 	texture_normal = texture_active if active else texture_idle
 	light_up.restart()
 	light_up.emitting = true
 
-func toggle_done():
-	done = !done
+func toggle_done(force_state = null):
+	if force_state != null:
+		done = force_state
+	else:
+		done = !done
 	mat.set_shader_parameter("done", done)
-	disabled = true
+	disabled = done
 
 
 const SCALE = 0.18;
@@ -70,24 +76,3 @@ func deglow(source: int):
 		mat.set_shader_parameter("pos2", after * SCALE)
 	mat.set_shader_parameter("circle_size", 0.17 + (0.04 * light_sources.size()))
 	mat.set_shader_parameter("time", 0.)
-
-
-#func _on_mouse_entered():
-#	mat.set_shader_parameter("pos1", mat.get_shader_parameter("pos2"))
-#	mat.set_shader_parameter("pos2", Vector2(0, 0))
-#	mat.set_shader_parameter("time", 0.)
-#
-#func _on_mouse_exited():
-#	var original = get_local_mouse_position()
-#	var offset_mouse = Vector2(original.x - 30., original.y - 30.)
-#	var normalized_mouse = offset_mouse/60;
-#	mat.set_shader_parameter("pos1", mat.get_shader_parameter("pos2"))
-#	if (abs(normalized_mouse.x) < 1. && abs(normalized_mouse.y) < 1.):
-#		mat.set_shader_parameter("pos2", sign(round(normalized_mouse)) * 0.18)
-#	else:
-#		# for now, this will only reach if you move the mouse really fast, touching the control and move further away
-#		mat.set_shader_parameter("pos2", sign(round(normalized_mouse)) * 0.42)
-#	mat.set_shader_parameter("time", 0.)
-
-
-
