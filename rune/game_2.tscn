@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dxfoel724rc3a"]
+[gd_scene load_steps=25 format=3 uid="uid://dxfoel724rc3a"]
 
 [ext_resource type="Shader" path="res://rune/darkness.gdshader" id="1_5afsg"]
 [ext_resource type="PackedScene" uid="uid://cg6coo54p0qxs" path="res://rune/runestone.tscn" id="1_e3gw0"]
@@ -6,121 +6,222 @@
 [ext_resource type="Script" path="res://rune/RuneGrid.gd" id="3_c3pcq"]
 [ext_resource type="Shader" path="res://rune/runestone.gdshader" id="3_exhxd"]
 [ext_resource type="Texture2D" uid="uid://dfcltwy5mcs58" path="res://rune/rune2.png" id="4_rqtb0"]
+[ext_resource type="Texture2D" uid="uid://yshrntj6nd54" path="res://rune/rune_symbol3.png" id="7_sukxf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4pgms"]
 shader = ExtResource("1_5afsg")
 shader_parameter/color = Color(0.588235, 0.909804, 0.992157, 1)
 shader_parameter/radius = 0.3
 shader_parameter/resolution = Vector2(188, 188)
-shader_parameter/mouse = Vector2(-814.738, -360.475)
+shader_parameter/mouse = Vector2(-436.847, -39.1456)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_pbgsy"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5pwoy"]
 resource_local_to_scene = true
 shader = ExtResource("3_exhxd")
 shader_parameter/active = false
-shader_parameter/time = 3028.75
+shader_parameter/time = 5252.61
 shader_parameter/pos1 = Vector2(1, 0)
 shader_parameter/pos2 = Vector2(2, 2)
 shader_parameter/circle_size = 0.165
 shader_parameter/resolution = Vector2(180, 180)
-shader_parameter/mouse = Vector2(-814.738, -364.475)
+shader_parameter/mouse = Vector2(-407.847, -11.1456)
 shader_parameter/rune_m = ExtResource("4_rqtb0")
+shader_parameter/symbol = ExtResource("7_sukxf")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1cbn0"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vf6ve"]
 resource_local_to_scene = true
 shader = ExtResource("3_exhxd")
 shader_parameter/active = false
-shader_parameter/time = 3028.75
+shader_parameter/time = 5252.61
 shader_parameter/pos1 = Vector2(1, 0)
 shader_parameter/pos2 = Vector2(2, 2)
 shader_parameter/circle_size = 0.165
 shader_parameter/resolution = Vector2(180, 180)
-shader_parameter/mouse = Vector2(-872.738, -364.475)
+shader_parameter/mouse = Vector2(-465.847, -11.1456)
 shader_parameter/rune_m = ExtResource("4_rqtb0")
+shader_parameter/symbol = ExtResource("7_sukxf")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_mlrwq"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_opm27"]
 resource_local_to_scene = true
 shader = ExtResource("3_exhxd")
 shader_parameter/active = false
-shader_parameter/time = 3028.75
+shader_parameter/time = 5252.61
 shader_parameter/pos1 = Vector2(1, 0)
 shader_parameter/pos2 = Vector2(2, 2)
 shader_parameter/circle_size = 0.165
 shader_parameter/resolution = Vector2(180, 180)
-shader_parameter/mouse = Vector2(-930.738, -364.475)
+shader_parameter/mouse = Vector2(-523.847, -11.1456)
 shader_parameter/rune_m = ExtResource("4_rqtb0")
+shader_parameter/symbol = ExtResource("7_sukxf")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_rul7t"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2cqxw"]
 resource_local_to_scene = true
 shader = ExtResource("3_exhxd")
 shader_parameter/active = false
-shader_parameter/time = 3028.75
+shader_parameter/time = 5252.61
 shader_parameter/pos1 = Vector2(1, 0)
 shader_parameter/pos2 = Vector2(2, 2)
 shader_parameter/circle_size = 0.165
 shader_parameter/resolution = Vector2(180, 180)
-shader_parameter/mouse = Vector2(-814.738, -428.475)
+shader_parameter/mouse = Vector2(-581.847, -11.1456)
 shader_parameter/rune_m = ExtResource("4_rqtb0")
+shader_parameter/symbol = ExtResource("7_sukxf")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_c8bik"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bvja6"]
 resource_local_to_scene = true
 shader = ExtResource("3_exhxd")
 shader_parameter/active = false
-shader_parameter/time = 3028.75
+shader_parameter/time = 5252.61
 shader_parameter/pos1 = Vector2(1, 0)
 shader_parameter/pos2 = Vector2(2, 2)
 shader_parameter/circle_size = 0.165
 shader_parameter/resolution = Vector2(180, 180)
-shader_parameter/mouse = Vector2(-872.738, -428.475)
+shader_parameter/mouse = Vector2(-407.847, -75.1456)
 shader_parameter/rune_m = ExtResource("4_rqtb0")
+shader_parameter/symbol = ExtResource("7_sukxf")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_mes1k"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fpo5y"]
 resource_local_to_scene = true
 shader = ExtResource("3_exhxd")
 shader_parameter/active = false
-shader_parameter/time = 3028.75
+shader_parameter/time = 5252.61
 shader_parameter/pos1 = Vector2(1, 0)
 shader_parameter/pos2 = Vector2(2, 2)
 shader_parameter/circle_size = 0.165
 shader_parameter/resolution = Vector2(180, 180)
-shader_parameter/mouse = Vector2(-930.738, -428.475)
+shader_parameter/mouse = Vector2(-465.847, -75.1456)
 shader_parameter/rune_m = ExtResource("4_rqtb0")
+shader_parameter/symbol = ExtResource("7_sukxf")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_847tm"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qbxll"]
 resource_local_to_scene = true
 shader = ExtResource("3_exhxd")
 shader_parameter/active = false
-shader_parameter/time = 3028.75
+shader_parameter/time = 5252.61
 shader_parameter/pos1 = Vector2(1, 0)
 shader_parameter/pos2 = Vector2(2, 2)
 shader_parameter/circle_size = 0.165
 shader_parameter/resolution = Vector2(180, 180)
-shader_parameter/mouse = Vector2(-814.738, -492.475)
+shader_parameter/mouse = Vector2(-523.847, -75.1456)
 shader_parameter/rune_m = ExtResource("4_rqtb0")
+shader_parameter/symbol = ExtResource("7_sukxf")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ns0cg"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eit8j"]
 resource_local_to_scene = true
 shader = ExtResource("3_exhxd")
 shader_parameter/active = false
-shader_parameter/time = 3028.75
+shader_parameter/time = 5252.61
 shader_parameter/pos1 = Vector2(1, 0)
 shader_parameter/pos2 = Vector2(2, 2)
 shader_parameter/circle_size = 0.165
 shader_parameter/resolution = Vector2(180, 180)
-shader_parameter/mouse = Vector2(-872.738, -492.475)
+shader_parameter/mouse = Vector2(-581.847, -75.1456)
 shader_parameter/rune_m = ExtResource("4_rqtb0")
+shader_parameter/symbol = ExtResource("7_sukxf")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_whlrj"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7c8c4"]
 resource_local_to_scene = true
 shader = ExtResource("3_exhxd")
 shader_parameter/active = false
-shader_parameter/time = 3028.75
+shader_parameter/time = 5252.61
 shader_parameter/pos1 = Vector2(1, 0)
 shader_parameter/pos2 = Vector2(2, 2)
 shader_parameter/circle_size = 0.165
 shader_parameter/resolution = Vector2(180, 180)
-shader_parameter/mouse = Vector2(-930.738, -492.475)
+shader_parameter/mouse = Vector2(-407.847, -139.146)
 shader_parameter/rune_m = ExtResource("4_rqtb0")
+shader_parameter/symbol = ExtResource("7_sukxf")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7tmmx"]
+resource_local_to_scene = true
+shader = ExtResource("3_exhxd")
+shader_parameter/active = false
+shader_parameter/time = 5252.61
+shader_parameter/pos1 = Vector2(1, 0)
+shader_parameter/pos2 = Vector2(2, 2)
+shader_parameter/circle_size = 0.165
+shader_parameter/resolution = Vector2(180, 180)
+shader_parameter/mouse = Vector2(-465.847, -139.146)
+shader_parameter/rune_m = ExtResource("4_rqtb0")
+shader_parameter/symbol = ExtResource("7_sukxf")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8jush"]
+resource_local_to_scene = true
+shader = ExtResource("3_exhxd")
+shader_parameter/active = false
+shader_parameter/time = 5252.61
+shader_parameter/pos1 = Vector2(1, 0)
+shader_parameter/pos2 = Vector2(2, 2)
+shader_parameter/circle_size = 0.165
+shader_parameter/resolution = Vector2(180, 180)
+shader_parameter/mouse = Vector2(-523.847, -139.146)
+shader_parameter/rune_m = ExtResource("4_rqtb0")
+shader_parameter/symbol = ExtResource("7_sukxf")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6im7s"]
+resource_local_to_scene = true
+shader = ExtResource("3_exhxd")
+shader_parameter/active = false
+shader_parameter/time = 5252.61
+shader_parameter/pos1 = Vector2(1, 0)
+shader_parameter/pos2 = Vector2(2, 2)
+shader_parameter/circle_size = 0.165
+shader_parameter/resolution = Vector2(180, 180)
+shader_parameter/mouse = Vector2(-581.847, -139.146)
+shader_parameter/rune_m = ExtResource("4_rqtb0")
+shader_parameter/symbol = ExtResource("7_sukxf")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ylt52"]
+resource_local_to_scene = true
+shader = ExtResource("3_exhxd")
+shader_parameter/active = false
+shader_parameter/time = 5252.61
+shader_parameter/pos1 = Vector2(1, 0)
+shader_parameter/pos2 = Vector2(2, 2)
+shader_parameter/circle_size = 0.165
+shader_parameter/resolution = Vector2(180, 180)
+shader_parameter/mouse = Vector2(-407.847, -203.146)
+shader_parameter/rune_m = ExtResource("4_rqtb0")
+shader_parameter/symbol = ExtResource("7_sukxf")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4o3ae"]
+resource_local_to_scene = true
+shader = ExtResource("3_exhxd")
+shader_parameter/active = false
+shader_parameter/time = 5252.61
+shader_parameter/pos1 = Vector2(1, 0)
+shader_parameter/pos2 = Vector2(2, 2)
+shader_parameter/circle_size = 0.165
+shader_parameter/resolution = Vector2(180, 180)
+shader_parameter/mouse = Vector2(-465.847, -203.146)
+shader_parameter/rune_m = ExtResource("4_rqtb0")
+shader_parameter/symbol = ExtResource("7_sukxf")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tk0ko"]
+resource_local_to_scene = true
+shader = ExtResource("3_exhxd")
+shader_parameter/active = false
+shader_parameter/time = 5252.61
+shader_parameter/pos1 = Vector2(1, 0)
+shader_parameter/pos2 = Vector2(2, 2)
+shader_parameter/circle_size = 0.165
+shader_parameter/resolution = Vector2(180, 180)
+shader_parameter/mouse = Vector2(-523.847, -203.146)
+shader_parameter/rune_m = ExtResource("4_rqtb0")
+shader_parameter/symbol = ExtResource("7_sukxf")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_81h1f"]
+resource_local_to_scene = true
+shader = ExtResource("3_exhxd")
+shader_parameter/active = false
+shader_parameter/time = 5252.61
+shader_parameter/pos1 = Vector2(1, 0)
+shader_parameter/pos2 = Vector2(2, 2)
+shader_parameter/circle_size = 0.165
+shader_parameter/resolution = Vector2(180, 180)
+shader_parameter/mouse = Vector2(-581.847, -203.146)
+shader_parameter/rune_m = ExtResource("4_rqtb0")
+shader_parameter/symbol = ExtResource("7_sukxf")
 
 [node name="game2" type="Node"]
 
@@ -160,68 +261,119 @@ grow_vertical = 2
 layout_mode = 2
 theme_override_constants/h_separation = -2
 theme_override_constants/v_separation = 4
-columns = 3
+columns = 4
 script = ExtResource("3_c3pcq")
 
 [node name="runestone" parent="rune_board/runegrid" instance=ExtResource("1_e3gw0")]
-material = SubResource("ShaderMaterial_pbgsy")
+material = SubResource("ShaderMaterial_5pwoy")
 layout_mode = 2
 light_sources = {}
 before = Vector2(0, 0)
 after = Vector2(0, 0)
 
 [node name="runestone2" parent="rune_board/runegrid" instance=ExtResource("1_e3gw0")]
-material = SubResource("ShaderMaterial_1cbn0")
+material = SubResource("ShaderMaterial_vf6ve")
 layout_mode = 2
 light_sources = {}
 before = Vector2(0, 0)
 after = Vector2(0, 0)
 
 [node name="runestone3" parent="rune_board/runegrid" instance=ExtResource("1_e3gw0")]
-material = SubResource("ShaderMaterial_mlrwq")
+material = SubResource("ShaderMaterial_opm27")
 layout_mode = 2
 light_sources = {}
 before = Vector2(0, 0)
 after = Vector2(0, 0)
 
 [node name="runestone4" parent="rune_board/runegrid" instance=ExtResource("1_e3gw0")]
-material = SubResource("ShaderMaterial_rul7t")
+material = SubResource("ShaderMaterial_2cqxw")
 layout_mode = 2
 light_sources = {}
 before = Vector2(0, 0)
 after = Vector2(0, 0)
 
 [node name="runestone5" parent="rune_board/runegrid" instance=ExtResource("1_e3gw0")]
-material = SubResource("ShaderMaterial_c8bik")
+material = SubResource("ShaderMaterial_bvja6")
 layout_mode = 2
 light_sources = {}
 before = Vector2(0, 0)
 after = Vector2(0, 0)
 
 [node name="runestone6" parent="rune_board/runegrid" instance=ExtResource("1_e3gw0")]
-material = SubResource("ShaderMaterial_mes1k")
+material = SubResource("ShaderMaterial_fpo5y")
 layout_mode = 2
 light_sources = {}
 before = Vector2(0, 0)
 after = Vector2(0, 0)
 
 [node name="runestone7" parent="rune_board/runegrid" instance=ExtResource("1_e3gw0")]
-material = SubResource("ShaderMaterial_847tm")
+material = SubResource("ShaderMaterial_qbxll")
 layout_mode = 2
 light_sources = {}
 before = Vector2(0, 0)
 after = Vector2(0, 0)
 
 [node name="runestone8" parent="rune_board/runegrid" instance=ExtResource("1_e3gw0")]
-material = SubResource("ShaderMaterial_ns0cg")
+material = SubResource("ShaderMaterial_eit8j")
 layout_mode = 2
 light_sources = {}
 before = Vector2(0, 0)
 after = Vector2(0, 0)
 
 [node name="runestone9" parent="rune_board/runegrid" instance=ExtResource("1_e3gw0")]
-material = SubResource("ShaderMaterial_whlrj")
+material = SubResource("ShaderMaterial_7c8c4")
 layout_mode = 2
 light_sources = {}
 before = Vector2(0, 0)
 after = Vector2(0, 0)
+
+[node name="runestone10" parent="rune_board/runegrid" instance=ExtResource("1_e3gw0")]
+material = SubResource("ShaderMaterial_7tmmx")
+layout_mode = 2
+light_sources = {}
+before = Vector2(0, 0)
+after = Vector2(0, 0)
+
+[node name="runestone11" parent="rune_board/runegrid" instance=ExtResource("1_e3gw0")]
+material = SubResource("ShaderMaterial_8jush")
+layout_mode = 2
+light_sources = {}
+before = Vector2(0, 0)
+after = Vector2(0, 0)
+
+[node name="runestone12" parent="rune_board/runegrid" instance=ExtResource("1_e3gw0")]
+material = SubResource("ShaderMaterial_6im7s")
+layout_mode = 2
+light_sources = {}
+before = Vector2(0, 0)
+after = Vector2(0, 0)
+
+[node name="runestone13" parent="rune_board/runegrid" instance=ExtResource("1_e3gw0")]
+material = SubResource("ShaderMaterial_ylt52")
+layout_mode = 2
+light_sources = {}
+before = Vector2(0, 0)
+after = Vector2(0, 0)
+
+[node name="runestone14" parent="rune_board/runegrid" instance=ExtResource("1_e3gw0")]
+material = SubResource("ShaderMaterial_4o3ae")
+layout_mode = 2
+light_sources = {}
+before = Vector2(0, 0)
+after = Vector2(0, 0)
+
+[node name="runestone15" parent="rune_board/runegrid" instance=ExtResource("1_e3gw0")]
+material = SubResource("ShaderMaterial_tk0ko")
+layout_mode = 2
+light_sources = {}
+before = Vector2(0, 0)
+after = Vector2(0, 0)
+
+[node name="runestone16" parent="rune_board/runegrid" instance=ExtResource("1_e3gw0")]
+material = SubResource("ShaderMaterial_81h1f")
+layout_mode = 2
+light_sources = {}
+before = Vector2(0, 0)
+after = Vector2(0, 0)
+
+[connection signal="ready" from="dark_grid" to="rune_board/runegrid" method="_modify_dark_grid"]

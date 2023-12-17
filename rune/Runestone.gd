@@ -4,6 +4,7 @@ class_name Runestone
 
 @onready var mat = (material as ShaderMaterial)
 @onready var light_up = $on_active as GPUParticles2D
+@onready var symbol = $symbol
 
 @export var active : bool = false
 @export_subgroup("textures")
@@ -18,6 +19,7 @@ func _process(delta):
 
 func toggle_active():
 	active = !active
+	symbol.visible = active
 	mat.set_shader_parameter("active", active)
 	texture_normal = texture_active if active else texture_idle
 	if active:

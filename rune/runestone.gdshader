@@ -3,6 +3,7 @@ shader_type canvas_item;
 uniform bool active = false;
 uniform float time = 0.;
 uniform sampler2D rune_m;
+uniform sampler2D symbol;
 
 uniform vec2 pos1 = vec2(1., 0.);
 uniform vec2 pos2 = vec2(0., 0.);
@@ -38,7 +39,13 @@ void fragment() {
 		vec2 pos = mix(pos1, pos2, easeOutExpo(progress));
 		float inner = circle(center + (0.002 * vec2(sin(time), cos(time))), pos, circle_size, 0.01);
 		float outer =  circle(center - (0.001 * vec2(sin(time), cos(time))), pos, circle_size + 0.035, 0.01);
-		c = mix(c, m_tex, (inner + outer) / 2.);
+		
+		vec4 symbol_tex = texture(symbol, UV);
+		vec4 m_tex2 = m_tex;
+		m_tex2.rgb *= (1. + (symbol_tex.a * 0.33));
+		c = mix(c, m_tex2, (inner + outer) / 2.);
+		
+		
 	}
 	
 	float hop = 2.;

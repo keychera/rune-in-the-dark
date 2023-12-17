@@ -1,23 +1,26 @@
-[gd_scene load_steps=13 format=3 uid="uid://cg6coo54p0qxs"]
+[gd_scene load_steps=15 format=3 uid="uid://cg6coo54p0qxs"]
 
 [ext_resource type="Shader" path="res://rune/runestone.gdshader" id="1_gfj4j"]
 [ext_resource type="Texture2D" uid="uid://dfcltwy5mcs58" path="res://rune/rune2.png" id="2_boc00"]
+[ext_resource type="Texture2D" uid="uid://yshrntj6nd54" path="res://rune/rune_symbol3.png" id="3_4faoe"]
 [ext_resource type="Texture2D" uid="uid://bi6ydmfsd08hk" path="res://rune/rune3.png" id="3_dsjbu"]
 [ext_resource type="Texture2D" uid="uid://da5l03vcrvu8o" path="res://rune/rune.png" id="4_5nuil"]
 [ext_resource type="Script" path="res://rune/Runestone.gd" id="4_rybpx"]
 [ext_resource type="Texture2D" uid="uid://badg4yejb5j0w" path="res://rune/light_particle.png" id="6_82ud2"]
+[ext_resource type="Texture2D" uid="uid://y1eij3f684jq" path="res://rune/rune_symbol.png" id="6_kp2t6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qatwr"]
 resource_local_to_scene = true
 shader = ExtResource("1_gfj4j")
 shader_parameter/active = false
-shader_parameter/time = 2176.45
+shader_parameter/time = 3666.01
 shader_parameter/pos1 = Vector2(1, 0)
 shader_parameter/pos2 = Vector2(2, 2)
 shader_parameter/circle_size = 0.165
 shader_parameter/resolution = Vector2(180, 180)
-shader_parameter/mouse = Vector2(505.535, -159.837)
+shader_parameter/mouse = Vector2(-195.013, -122.934)
 shader_parameter/rune_m = ExtResource("2_boc00")
+shader_parameter/symbol = ExtResource("3_4faoe")
 
 [sub_resource type="Gradient" id="Gradient_to266"]
 offsets = PackedFloat32Array(0, 0.407895, 1)
@@ -76,3 +79,8 @@ process_material = SubResource("ParticleProcessMaterial_iwnhk")
 texture = ExtResource("6_82ud2")
 one_shot = true
 explosiveness = 0.88
+
+[node name="symbol" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(31, 28)
+texture = ExtResource("6_kp2t6")

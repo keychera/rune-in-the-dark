@@ -9,6 +9,15 @@ func _ready():
 		var rune = get_child(n) as Runestone
 		rune.button_up.connect(_on_rune_click.bind(n, rune))
 
+
+func _modify_dark_grid():
+	var dark_grid = get_node("/root/game2/dark_grid")
+	await get_tree().create_timer(0.1).timeout # why
+	dark_grid.size = size
+	dark_grid.size.y += 8
+	dark_grid.position = position
+	dark_grid.position.y -= 4
+
 func _on_rune_click(order: int, rune: Runestone):
 	rune.toggle_active()
 	
