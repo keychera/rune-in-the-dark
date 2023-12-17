@@ -40,7 +40,8 @@ func side_glow(source: int, from: Vector2):
 		light_sources[source] = from
 		after = light_sources.values().reduce(func(a :Vector2, b:Vector2): return (a + b)/2)
 		mat.set_shader_parameter("pos2", after * SCALE)
-
+	
+	mat.set_shader_parameter("circle_size", 0.145 + (0.04 * light_sources.size()))
 	mat.set_shader_parameter("time", 0.)
 	
 func deglow(source: int):
@@ -52,6 +53,7 @@ func deglow(source: int):
 	else:
 		after = light_sources.values().reduce(func(a :Vector2, b:Vector2): return (a + b)/2)
 		mat.set_shader_parameter("pos2", after * SCALE)
+	mat.set_shader_parameter("circle_size", 0.145 + (0.04 * light_sources.size()))
 	mat.set_shader_parameter("time", 0.)
 
 

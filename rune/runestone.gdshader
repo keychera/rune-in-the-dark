@@ -6,6 +6,7 @@ uniform sampler2D rune_m;
 
 uniform vec2 pos1 = vec2(1., 0.);
 uniform vec2 pos2 = vec2(0., 0.);
+uniform float circle_size = 0.165;
 
 uniform vec2 resolution;
 uniform vec2 mouse;
@@ -35,8 +36,8 @@ void fragment() {
 		float max_time = .1;
 		float progress = clamp(time / max_time, 0., 1.);
 		vec2 pos = mix(pos1, pos2, easeOutExpo(progress));
-		float inner = circle(center + (0.002 * vec2(sin(time), cos(time))), pos, 0.165, 0.01);
-		float outer =  circle(center - (0.001 * vec2(sin(time), cos(time))), pos, 0.2, 0.01);
+		float inner = circle(center + (0.002 * vec2(sin(time), cos(time))), pos, circle_size, 0.01);
+		float outer =  circle(center - (0.001 * vec2(sin(time), cos(time))), pos, circle_size + 0.035, 0.01);
 		c = mix(c, m_tex, (inner + outer) / 2.);
 	}
 	
