@@ -1,14 +1,22 @@
 extends GridContainer
 
+const symbols : Array = [1, 2]
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	var n_child = get_child_count()
+	assert(n_child % 2 == 0)
+	var rune_idxs = range(n_child)
+	rune_idxs.shuffle()
+	var symbol_idxs = range(symbols.size())
+	symbol_idxs.shuffle()
 	for n in n_child:
-		var rune = get_child(n) as Runestone
-		rune.button_up.connect(_on_rune_click.bind(n, rune))
-
+		var idx = rune_idxs[n]
+		var rune = get_child(idx) as Runestone
+		var symbol_n = floor(n/2)
+		var rand_symbol = symbols[symbol_idxs[symbol_n % symbols.size()]]
+		rune.order = idx
+		rune.symbol_n = rand_symbol
+		rune.button_up.connect(_on_rune_click.bind(rune))
 
 func _modify_dark_grid():
 	var dark_grid = get_node("/root/game2/dark_grid")
@@ -17,10 +25,11 @@ func _modify_dark_grid():
 	dark_grid.size.y += 8
 	dark_grid.position = position
 	dark_grid.position.y -= 4
-
-func _on_rune_click(order: int, rune: Runestone):
-	rune.toggle_active()
 	
+var prev: Runestone = null
+
+func toggle_rune_neighbor(rune: Runestone, active: bool):
+	var order = rune.order
 	var above = order - columns
 	above = above if above >= 0. else -1
 	var below = order + columns
@@ -32,7 +41,7 @@ func _on_rune_click(order: int, rune: Runestone):
 	right = right if right/columns == row else -1
 	
 	var id = rune.get_instance_id()
-	if rune.active:
+	if active:
 		if above >= 0:
 			(get_child(above) as Runestone).side_glow(id, Vector2(0., 1.))
 		if below >= 0:
@@ -50,8 +59,30 @@ func _on_rune_click(order: int, rune: Runestone):
 			(get_child(right) as Runestone).deglow(id)
 		if left >= 0:
 			(get_child(left) as Runestone).deglow(id)
-	
+
+func _on_rune_click(rune: Runestone):
+	rune.toggle_active()
+	toggle_rune_neighbor(rune, true)
+			
 #	print("clicking " + str(order) + " on row " + str(row))
 #	print(str("   ", above, "   "))
 #	print(str(left ,"  ", order, "  ", right))
 #	print(str("   ", below, "   "))
+
+	if (prev != null):
+		if(prev.get_instance_id() != rune.get_instance_id()):
+			if (prev.symbol_n == rune.symbol_n):
+				prev.toggle_done()
+				rune.toggle_done()
+			else:
+				prev.toggle_active()
+				rune.toggle_active()
+			toggle_rune_neighbor(prev, false)
+			toggle_rune_neighbor(rune, false)
+			prev = null
+		else:
+			if !prev.active:
+				prev = null
+	else:
+		prev = rune
+	

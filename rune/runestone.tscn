@@ -2,25 +2,27 @@
 
 [ext_resource type="Shader" path="res://rune/runestone.gdshader" id="1_gfj4j"]
 [ext_resource type="Texture2D" uid="uid://dfcltwy5mcs58" path="res://rune/rune2.png" id="2_boc00"]
-[ext_resource type="Texture2D" uid="uid://yshrntj6nd54" path="res://rune/rune_symbol3.png" id="3_4faoe"]
 [ext_resource type="Texture2D" uid="uid://bi6ydmfsd08hk" path="res://rune/rune3.png" id="3_dsjbu"]
+[ext_resource type="Texture2D" uid="uid://bo5hxfafevy44" path="res://rune/symbols/8.png" id="3_kqabd"]
 [ext_resource type="Texture2D" uid="uid://da5l03vcrvu8o" path="res://rune/rune.png" id="4_5nuil"]
 [ext_resource type="Script" path="res://rune/Runestone.gd" id="4_rybpx"]
+[ext_resource type="Texture2D" uid="uid://3nhlpwv7fbrv" path="res://rune/symbols/8l.png" id="4_sksuw"]
 [ext_resource type="Texture2D" uid="uid://badg4yejb5j0w" path="res://rune/light_particle.png" id="6_82ud2"]
-[ext_resource type="Texture2D" uid="uid://y1eij3f684jq" path="res://rune/rune_symbol.png" id="6_kp2t6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qatwr"]
 resource_local_to_scene = true
 shader = ExtResource("1_gfj4j")
-shader_parameter/active = false
-shader_parameter/time = 3666.01
+shader_parameter/active = true
+shader_parameter/done = false
+shader_parameter/time = 1365.24
 shader_parameter/pos1 = Vector2(1, 0)
 shader_parameter/pos2 = Vector2(2, 2)
 shader_parameter/circle_size = 0.165
 shader_parameter/resolution = Vector2(180, 180)
-shader_parameter/mouse = Vector2(-195.013, -122.934)
+shader_parameter/mouse = Vector2(719.787, 441.031)
 shader_parameter/rune_m = ExtResource("2_boc00")
-shader_parameter/symbol = ExtResource("3_4faoe")
+shader_parameter/symbol_active = ExtResource("4_sksuw")
+shader_parameter/symbol = ExtResource("3_kqabd")
 
 [sub_resource type="Gradient" id="Gradient_to266"]
 offsets = PackedFloat32Array(0, 0.407895, 1)
@@ -66,8 +68,11 @@ texture_normal = ExtResource("3_dsjbu")
 ignore_texture_size = true
 stretch_mode = 3
 script = ExtResource("4_rybpx")
+order = null
+symbol_n = null
 texture_idle = ExtResource("3_dsjbu")
 texture_active = ExtResource("4_5nuil")
+done = null
 before = null
 after = null
 
@@ -79,8 +84,3 @@ process_material = SubResource("ParticleProcessMaterial_iwnhk")
 texture = ExtResource("6_82ud2")
 one_shot = true
 explosiveness = 0.88
-
-[node name="symbol" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(31, 28)
-texture = ExtResource("6_kp2t6")

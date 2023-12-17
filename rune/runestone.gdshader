@@ -1,8 +1,10 @@
 shader_type canvas_item;
 
 uniform bool active = false;
+uniform bool done = false;
 uniform float time = 0.;
 uniform sampler2D rune_m;
+uniform sampler2D symbol_active;
 uniform sampler2D symbol;
 
 uniform vec2 pos1 = vec2(1., 0.);
@@ -44,8 +46,14 @@ void fragment() {
 		vec4 m_tex2 = m_tex;
 		m_tex2.rgb *= (1. + (symbol_tex.a * 0.33));
 		c = mix(c, m_tex2, (inner + outer) / 2.);
-		
-		
+	} else {
+		vec4 symbol_tex;
+		if (done) {
+			symbol_tex = texture(symbol, UV);
+		} else {
+			symbol_tex = texture(symbol_active, UV);
+		}
+		c.rgb = mix(c.rgb, symbol_tex.rgb, symbol_tex.a);
 	}
 	
 	float hop = 2.;

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yshrntj6nd54"
-path="res://.godot/imported/rune_symbol3.png-933a1f8f2f018849369c30b14321fb4c.ctex"
+uid="uid://bo5hxfafevy44"
+path="res://.godot/imported/8.png-f8878463f7013f0968be51e967c3a3dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://rune/rune_symbol3.png"
-dest_files=["res://.godot/imported/rune_symbol3.png-933a1f8f2f018849369c30b14321fb4c.ctex"]
+source_file="res://rune/symbols/8.png"
+dest_files=["res://.godot/imported/8.png-f8878463f7013f0968be51e967c3a3dd.ctex"]
 
 [params]
 
