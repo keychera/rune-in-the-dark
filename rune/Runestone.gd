@@ -22,13 +22,17 @@ func _process(delta):
 	mat.set_shader_parameter("time", mat.get_shader_parameter("time") + delta)
 	mat.set_shader_parameter("mouse", get_local_mouse_position())
 
+func set_symbol(sym: int):
+	symbol_n = sym
+	mat.set_shader_parameter("symbol_active", load(str("res://rune/symbols/", str(sym), "l.png")));
+	mat.set_shader_parameter("symbol", load(str("res://rune/symbols/", str(sym), ".png")));
+
 func toggle_active():
 	active = !active
 	mat.set_shader_parameter("active", active)
 	texture_normal = texture_active if active else texture_idle
 	light_up.restart()
 	light_up.emitting = true
-		
 
 func toggle_done():
 	done = !done
@@ -52,7 +56,7 @@ func side_glow(source: int, from: Vector2):
 		after = light_sources.values().reduce(func(a :Vector2, b:Vector2): return (a + b)/2)
 		mat.set_shader_parameter("pos2", after * SCALE)
 	
-	mat.set_shader_parameter("circle_size", 0.145 + (0.04 * light_sources.size()))
+	mat.set_shader_parameter("circle_size", 0.17 + (0.04 * light_sources.size()))
 	mat.set_shader_parameter("time", 0.)
 	
 func deglow(source: int):
@@ -64,7 +68,7 @@ func deglow(source: int):
 	else:
 		after = light_sources.values().reduce(func(a :Vector2, b:Vector2): return (a + b)/2)
 		mat.set_shader_parameter("pos2", after * SCALE)
-	mat.set_shader_parameter("circle_size", 0.145 + (0.04 * light_sources.size()))
+	mat.set_shader_parameter("circle_size", 0.17 + (0.04 * light_sources.size()))
 	mat.set_shader_parameter("time", 0.)
 
 

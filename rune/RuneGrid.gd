@@ -1,6 +1,6 @@
 extends GridContainer
 
-const symbols : Array = [1, 2]
+const symbols : Array = [1, 2, 3, 4, 5, 6, 7, 8]
 
 func _ready():
 	var n_child = get_child_count()
@@ -15,7 +15,7 @@ func _ready():
 		var symbol_n = floor(n/2)
 		var rand_symbol = symbols[symbol_idxs[symbol_n % symbols.size()]]
 		rune.order = idx
-		rune.symbol_n = rand_symbol
+		rune.set_symbol(rand_symbol)
 		rune.button_up.connect(_on_rune_click.bind(rune))
 
 func _modify_dark_grid():
@@ -62,7 +62,7 @@ func toggle_rune_neighbor(rune: Runestone, active: bool):
 
 func _on_rune_click(rune: Runestone):
 	rune.toggle_active()
-	toggle_rune_neighbor(rune, true)
+	toggle_rune_neighbor(rune, rune.active)
 			
 #	print("clicking " + str(order) + " on row " + str(row))
 #	print(str("   ", above, "   "))
@@ -77,8 +77,8 @@ func _on_rune_click(rune: Runestone):
 			else:
 				prev.toggle_active()
 				rune.toggle_active()
-			toggle_rune_neighbor(prev, false)
-			toggle_rune_neighbor(rune, false)
+				toggle_rune_neighbor(prev, false)
+				toggle_rune_neighbor(rune, false)
 			prev = null
 		else:
 			if !prev.active:
