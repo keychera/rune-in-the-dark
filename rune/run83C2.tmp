@@ -11,11 +11,11 @@
 resource_local_to_scene = true
 shader = ExtResource("1_gfj4j")
 shader_parameter/active = false
-shader_parameter/time = 1808.66
+shader_parameter/time = 723.957
 shader_parameter/pos1 = Vector2(1, 0)
 shader_parameter/pos2 = Vector2(2, 2)
 shader_parameter/resolution = Vector2(180, 180)
-shader_parameter/mouse = Vector2(-292.032, 396.124)
+shader_parameter/mouse = Vector2(99.7435, 87.7758)
 shader_parameter/rune_m = ExtResource("2_boc00")
 
 [sub_resource type="Gradient" id="Gradient_to266"]
@@ -64,8 +64,6 @@ stretch_mode = 3
 script = ExtResource("4_rybpx")
 texture_idle = ExtResource("3_dsjbu")
 texture_active = ExtResource("4_5nuil")
-before = null
-after = null
 
 [node name="on_active" type="GPUParticles2D" parent="."]
 position = Vector2(4, 2)
