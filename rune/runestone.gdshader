@@ -7,7 +7,6 @@ uniform vec2 pos1 = vec2(1., 0.);
 uniform vec2 pos2 = vec2(0., 0.);
 
 uniform vec2 resolution;
-uniform vec2 mouse;
 #define RATIO (resolution.x/resolution.y)
 
 float circle(in vec2 _uv, in vec2 _pos, in float _radius, in float grad) {
@@ -27,7 +26,6 @@ float easeOutExpo(float x) {
 
 void fragment() {
 	vec4 c = texture(TEXTURE, UV);
-	vec2 mouse_pos = mouse/resolution;
 	
 	vec2 center = UV - 0.5;
 	float max_time = .5;

@@ -7,11 +7,10 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3n3nq"]
 shader = ExtResource("1_2bgkf")
-shader_parameter/time = 0.760509
-shader_parameter/pos1 = Vector2(0.4, 0)
-shader_parameter/pos2 = Vector2(0.2, 0)
+shader_parameter/time = 817.943
+shader_parameter/pos1 = Vector2(0.42, 0)
+shader_parameter/pos2 = Vector2(0.18, 0)
 shader_parameter/resolution = Vector2(180, 180)
-shader_parameter/mouse = Vector2(319.781, 189.105)
 shader_parameter/rune_m = ExtResource("2_xapxf")
 
 [node name="rune_tile" type="Node"]
@@ -21,3 +20,14 @@ material = SubResource("ShaderMaterial_3n3nq")
 position = Vector2(88, 91)
 texture = ExtResource("2_ughqd")
 script = ExtResource("3_tkhkk")
+
+[node name="Control" type="Control" parent="runestone"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -28.0
+offset_top = -30.0
+offset_right = 27.0
+offset_bottom = 30.0
+
+[connection signal="mouse_entered" from="runestone/Control" to="runestone" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="runestone/Control" to="runestone" method="_on_mouse_exited"]

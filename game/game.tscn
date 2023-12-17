@@ -20,10 +20,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_5rcbi"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lgxiq"]
 resource_local_to_scene = true
 shader = SubResource("Shader_e562u")
-shader_parameter/mouse = Vector2(166.51, -189.612)
+shader_parameter/mouse = Vector2(-505, -141.422)
 
 [sub_resource type="Shader" id="Shader_806hu"]
 resource_local_to_scene = true
@@ -39,10 +39,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_381d7"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x2cjo"]
 resource_local_to_scene = true
 shader = SubResource("Shader_806hu")
-shader_parameter/mouse = Vector2(102.51, -189.612)
+shader_parameter/mouse = Vector2(-569, -141.422)
 
 [sub_resource type="Shader" id="Shader_2wjba"]
 resource_local_to_scene = true
@@ -58,10 +58,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1xof6"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2waqo"]
 resource_local_to_scene = true
 shader = SubResource("Shader_2wjba")
-shader_parameter/mouse = Vector2(38.5098, -189.612)
+shader_parameter/mouse = Vector2(-633, -141.422)
 
 [sub_resource type="Shader" id="Shader_ln5xu"]
 resource_local_to_scene = true
@@ -77,10 +77,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_gymtb"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_47ga5"]
 resource_local_to_scene = true
 shader = SubResource("Shader_ln5xu")
-shader_parameter/mouse = Vector2(-25.4902, -189.612)
+shader_parameter/mouse = Vector2(-697, -141.422)
 
 [sub_resource type="Shader" id="Shader_u4yis"]
 resource_local_to_scene = true
@@ -96,10 +96,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_2o3p1"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yivxo"]
 resource_local_to_scene = true
 shader = SubResource("Shader_u4yis")
-shader_parameter/mouse = Vector2(-89.4902, -189.612)
+shader_parameter/mouse = Vector2(-761, -141.422)
 
 [sub_resource type="Shader" id="Shader_03cq4"]
 resource_local_to_scene = true
@@ -115,10 +115,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_56emd"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oebhx"]
 resource_local_to_scene = true
 shader = SubResource("Shader_03cq4")
-shader_parameter/mouse = Vector2(-153.49, -189.612)
+shader_parameter/mouse = Vector2(-825, -141.422)
 
 [sub_resource type="Shader" id="Shader_fkppm"]
 resource_local_to_scene = true
@@ -134,10 +134,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_wfiij"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2tsv2"]
 resource_local_to_scene = true
 shader = SubResource("Shader_fkppm")
-shader_parameter/mouse = Vector2(166.51, -253.612)
+shader_parameter/mouse = Vector2(-505, -205.422)
 
 [sub_resource type="Shader" id="Shader_q15p1"]
 resource_local_to_scene = true
@@ -153,10 +153,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_beaie"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lm5t7"]
 resource_local_to_scene = true
 shader = SubResource("Shader_q15p1")
-shader_parameter/mouse = Vector2(102.51, -253.612)
+shader_parameter/mouse = Vector2(-569, -205.422)
 
 [sub_resource type="Shader" id="Shader_v48k0"]
 resource_local_to_scene = true
@@ -172,10 +172,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_vu0lj"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qcxmo"]
 resource_local_to_scene = true
 shader = SubResource("Shader_v48k0")
-shader_parameter/mouse = Vector2(38.5098, -253.612)
+shader_parameter/mouse = Vector2(-633, -205.422)
 
 [sub_resource type="Shader" id="Shader_626wi"]
 resource_local_to_scene = true
@@ -191,10 +191,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_5rt8n"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8mxk4"]
 resource_local_to_scene = true
 shader = SubResource("Shader_626wi")
-shader_parameter/mouse = Vector2(-25.4902, -253.612)
+shader_parameter/mouse = Vector2(-697, -205.422)
 
 [sub_resource type="Shader" id="Shader_t2qp1"]
 resource_local_to_scene = true
@@ -210,10 +210,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_mwdws"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f8l7h"]
 resource_local_to_scene = true
 shader = SubResource("Shader_t2qp1")
-shader_parameter/mouse = Vector2(-89.4902, -253.612)
+shader_parameter/mouse = Vector2(-761, -205.422)
 
 [sub_resource type="Shader" id="Shader_8xny0"]
 resource_local_to_scene = true
@@ -229,10 +229,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ovmht"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s2nmi"]
 resource_local_to_scene = true
 shader = SubResource("Shader_8xny0")
-shader_parameter/mouse = Vector2(-153.49, -253.612)
+shader_parameter/mouse = Vector2(-825, -205.422)
 
 [sub_resource type="Shader" id="Shader_r3wja"]
 resource_local_to_scene = true
@@ -248,10 +248,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_st3q4"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tvkfr"]
 resource_local_to_scene = true
 shader = SubResource("Shader_r3wja")
-shader_parameter/mouse = Vector2(166.51, -317.612)
+shader_parameter/mouse = Vector2(-505, -269.422)
 
 [sub_resource type="Shader" id="Shader_r7maw"]
 resource_local_to_scene = true
@@ -267,10 +267,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_05866"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_juudb"]
 resource_local_to_scene = true
 shader = SubResource("Shader_r7maw")
-shader_parameter/mouse = Vector2(102.51, -317.612)
+shader_parameter/mouse = Vector2(-569, -269.422)
 
 [sub_resource type="Shader" id="Shader_bbsen"]
 resource_local_to_scene = true
@@ -286,10 +286,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_r7tp1"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yo85w"]
 resource_local_to_scene = true
 shader = SubResource("Shader_bbsen")
-shader_parameter/mouse = Vector2(38.5098, -317.612)
+shader_parameter/mouse = Vector2(-633, -269.422)
 
 [sub_resource type="Shader" id="Shader_p6vko"]
 resource_local_to_scene = true
@@ -305,10 +305,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_lnwj4"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vy81w"]
 resource_local_to_scene = true
 shader = SubResource("Shader_p6vko")
-shader_parameter/mouse = Vector2(-25.4902, -317.612)
+shader_parameter/mouse = Vector2(-697, -269.422)
 
 [sub_resource type="Shader" id="Shader_pl4k5"]
 resource_local_to_scene = true
@@ -324,10 +324,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_khtb3"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i00mx"]
 resource_local_to_scene = true
 shader = SubResource("Shader_pl4k5")
-shader_parameter/mouse = Vector2(-89.4902, -317.612)
+shader_parameter/mouse = Vector2(-761, -269.422)
 
 [sub_resource type="Shader" id="Shader_qol4g"]
 resource_local_to_scene = true
@@ -343,10 +343,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_uoba0"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0d5ow"]
 resource_local_to_scene = true
 shader = SubResource("Shader_qol4g")
-shader_parameter/mouse = Vector2(-153.49, -317.612)
+shader_parameter/mouse = Vector2(-825, -269.422)
 
 [sub_resource type="Shader" id="Shader_tkyot"]
 resource_local_to_scene = true
@@ -362,10 +362,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_20msb"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uxm5b"]
 resource_local_to_scene = true
 shader = SubResource("Shader_tkyot")
-shader_parameter/mouse = Vector2(166.51, -381.612)
+shader_parameter/mouse = Vector2(-505, -333.422)
 
 [sub_resource type="Shader" id="Shader_lncn0"]
 resource_local_to_scene = true
@@ -381,10 +381,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1htc6"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qu48t"]
 resource_local_to_scene = true
 shader = SubResource("Shader_lncn0")
-shader_parameter/mouse = Vector2(102.51, -381.612)
+shader_parameter/mouse = Vector2(-569, -333.422)
 
 [sub_resource type="Shader" id="Shader_smi23"]
 resource_local_to_scene = true
@@ -400,10 +400,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_vhgbg"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4brya"]
 resource_local_to_scene = true
 shader = SubResource("Shader_smi23")
-shader_parameter/mouse = Vector2(38.5098, -381.612)
+shader_parameter/mouse = Vector2(-633, -333.422)
 
 [sub_resource type="Shader" id="Shader_h8g43"]
 resource_local_to_scene = true
@@ -419,10 +419,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_img8d"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8dk7p"]
 resource_local_to_scene = true
 shader = SubResource("Shader_h8g43")
-shader_parameter/mouse = Vector2(-25.4902, -381.612)
+shader_parameter/mouse = Vector2(-697, -333.422)
 
 [sub_resource type="Shader" id="Shader_f4o34"]
 resource_local_to_scene = true
@@ -438,10 +438,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_l1pch"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o3hfd"]
 resource_local_to_scene = true
 shader = SubResource("Shader_f4o34")
-shader_parameter/mouse = Vector2(-89.4902, -381.612)
+shader_parameter/mouse = Vector2(-761, -333.422)
 
 [sub_resource type="Shader" id="Shader_fxlmv"]
 resource_local_to_scene = true
@@ -457,10 +457,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ec0i3"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dfeyc"]
 resource_local_to_scene = true
 shader = SubResource("Shader_fxlmv")
-shader_parameter/mouse = Vector2(-153.49, -381.612)
+shader_parameter/mouse = Vector2(-825, -333.422)
 
 [sub_resource type="Shader" id="Shader_ptamj"]
 resource_local_to_scene = true
@@ -476,10 +476,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_tgs7g"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ax6hs"]
 resource_local_to_scene = true
 shader = SubResource("Shader_ptamj")
-shader_parameter/mouse = Vector2(166.51, -445.612)
+shader_parameter/mouse = Vector2(-505, -397.422)
 
 [sub_resource type="Shader" id="Shader_qa1f3"]
 resource_local_to_scene = true
@@ -495,10 +495,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_18jx0"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pwry6"]
 resource_local_to_scene = true
 shader = SubResource("Shader_qa1f3")
-shader_parameter/mouse = Vector2(102.51, -445.612)
+shader_parameter/mouse = Vector2(-569, -397.422)
 
 [sub_resource type="Shader" id="Shader_p7m2f"]
 resource_local_to_scene = true
@@ -514,10 +514,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1xgd0"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dxkwl"]
 resource_local_to_scene = true
 shader = SubResource("Shader_p7m2f")
-shader_parameter/mouse = Vector2(38.5098, -445.612)
+shader_parameter/mouse = Vector2(-633, -397.422)
 
 [sub_resource type="Shader" id="Shader_djq5i"]
 resource_local_to_scene = true
@@ -533,10 +533,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_2hqyp"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_837b2"]
 resource_local_to_scene = true
 shader = SubResource("Shader_djq5i")
-shader_parameter/mouse = Vector2(-25.4902, -445.612)
+shader_parameter/mouse = Vector2(-697, -397.422)
 
 [sub_resource type="Shader" id="Shader_y8yjg"]
 resource_local_to_scene = true
@@ -552,10 +552,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_xh3kf"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_40hpw"]
 resource_local_to_scene = true
 shader = SubResource("Shader_y8yjg")
-shader_parameter/mouse = Vector2(-89.4902, -445.612)
+shader_parameter/mouse = Vector2(-761, -397.422)
 
 [sub_resource type="Shader" id="Shader_p2tg6"]
 resource_local_to_scene = true
@@ -571,10 +571,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_adsr6"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6icll"]
 resource_local_to_scene = true
 shader = SubResource("Shader_p2tg6")
-shader_parameter/mouse = Vector2(-153.49, -445.612)
+shader_parameter/mouse = Vector2(-825, -397.422)
 
 [sub_resource type="Shader" id="Shader_ehbiq"]
 resource_local_to_scene = true
@@ -590,10 +590,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_n56n3"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6tkkd"]
 resource_local_to_scene = true
 shader = SubResource("Shader_ehbiq")
-shader_parameter/mouse = Vector2(166.51, -509.612)
+shader_parameter/mouse = Vector2(-505, -461.422)
 
 [sub_resource type="Shader" id="Shader_svsx0"]
 resource_local_to_scene = true
@@ -609,10 +609,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_e4sfm"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6wm1c"]
 resource_local_to_scene = true
 shader = SubResource("Shader_svsx0")
-shader_parameter/mouse = Vector2(102.51, -509.612)
+shader_parameter/mouse = Vector2(-569, -461.422)
 
 [sub_resource type="Shader" id="Shader_b3v8b"]
 resource_local_to_scene = true
@@ -628,10 +628,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_a3gg4"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jo0oe"]
 resource_local_to_scene = true
 shader = SubResource("Shader_b3v8b")
-shader_parameter/mouse = Vector2(38.5098, -509.612)
+shader_parameter/mouse = Vector2(-633, -461.422)
 
 [sub_resource type="Shader" id="Shader_71cun"]
 resource_local_to_scene = true
@@ -647,10 +647,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_7yi2c"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bjh8i"]
 resource_local_to_scene = true
 shader = SubResource("Shader_71cun")
-shader_parameter/mouse = Vector2(-25.4902, -509.612)
+shader_parameter/mouse = Vector2(-697, -461.422)
 
 [sub_resource type="Shader" id="Shader_rg0q3"]
 resource_local_to_scene = true
@@ -666,10 +666,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_sqh6q"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_63fkr"]
 resource_local_to_scene = true
 shader = SubResource("Shader_rg0q3")
-shader_parameter/mouse = Vector2(-89.4902, -509.612)
+shader_parameter/mouse = Vector2(-761, -461.422)
 
 [sub_resource type="Shader" id="Shader_3jp47"]
 resource_local_to_scene = true
@@ -685,10 +685,10 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_e6sgj"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wspq3"]
 resource_local_to_scene = true
 shader = SubResource("Shader_3jp47")
-shader_parameter/mouse = Vector2(-153.49, -509.612)
+shader_parameter/mouse = Vector2(-825, -461.422)
 
 [node name="Node" type="Node"]
 
@@ -715,145 +715,145 @@ columns = 6
 script = ExtResource("1_2oehf")
 
 [node name="rune" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_5rcbi")
+material = SubResource("ShaderMaterial_lgxiq")
 layout_mode = 2
 
 [node name="rune2" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_381d7")
+material = SubResource("ShaderMaterial_x2cjo")
 layout_mode = 2
 
 [node name="rune3" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_1xof6")
+material = SubResource("ShaderMaterial_2waqo")
 layout_mode = 2
 
 [node name="rune4" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_gymtb")
+material = SubResource("ShaderMaterial_47ga5")
 layout_mode = 2
 
 [node name="rune5" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_2o3p1")
+material = SubResource("ShaderMaterial_yivxo")
 layout_mode = 2
 
 [node name="rune6" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_56emd")
+material = SubResource("ShaderMaterial_oebhx")
 layout_mode = 2
 
 [node name="rune7" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_wfiij")
+material = SubResource("ShaderMaterial_2tsv2")
 layout_mode = 2
 
 [node name="rune8" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_beaie")
+material = SubResource("ShaderMaterial_lm5t7")
 layout_mode = 2
 
 [node name="rune9" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_vu0lj")
+material = SubResource("ShaderMaterial_qcxmo")
 layout_mode = 2
 
 [node name="rune10" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_5rt8n")
+material = SubResource("ShaderMaterial_8mxk4")
 layout_mode = 2
 
 [node name="rune11" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_mwdws")
+material = SubResource("ShaderMaterial_f8l7h")
 layout_mode = 2
 
 [node name="rune12" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_ovmht")
+material = SubResource("ShaderMaterial_s2nmi")
 layout_mode = 2
 
 [node name="rune13" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_st3q4")
+material = SubResource("ShaderMaterial_tvkfr")
 layout_mode = 2
 
 [node name="rune14" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_05866")
+material = SubResource("ShaderMaterial_juudb")
 layout_mode = 2
 
 [node name="rune15" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_r7tp1")
+material = SubResource("ShaderMaterial_yo85w")
 layout_mode = 2
 
 [node name="rune16" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_lnwj4")
+material = SubResource("ShaderMaterial_vy81w")
 layout_mode = 2
 
 [node name="rune17" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_khtb3")
+material = SubResource("ShaderMaterial_i00mx")
 layout_mode = 2
 
 [node name="rune18" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_uoba0")
+material = SubResource("ShaderMaterial_0d5ow")
 layout_mode = 2
 
 [node name="rune19" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_20msb")
+material = SubResource("ShaderMaterial_uxm5b")
 layout_mode = 2
 
 [node name="rune20" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_1htc6")
+material = SubResource("ShaderMaterial_qu48t")
 layout_mode = 2
 
 [node name="rune21" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_vhgbg")
+material = SubResource("ShaderMaterial_4brya")
 layout_mode = 2
 
 [node name="rune22" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_img8d")
+material = SubResource("ShaderMaterial_8dk7p")
 layout_mode = 2
 
 [node name="rune23" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_l1pch")
+material = SubResource("ShaderMaterial_o3hfd")
 layout_mode = 2
 
 [node name="rune24" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_ec0i3")
+material = SubResource("ShaderMaterial_dfeyc")
 layout_mode = 2
 
 [node name="rune25" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_tgs7g")
+material = SubResource("ShaderMaterial_ax6hs")
 layout_mode = 2
 
 [node name="rune26" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_18jx0")
+material = SubResource("ShaderMaterial_pwry6")
 layout_mode = 2
 
 [node name="rune27" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_1xgd0")
+material = SubResource("ShaderMaterial_dxkwl")
 layout_mode = 2
 
 [node name="rune28" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_2hqyp")
+material = SubResource("ShaderMaterial_837b2")
 layout_mode = 2
 
 [node name="rune29" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_xh3kf")
+material = SubResource("ShaderMaterial_40hpw")
 layout_mode = 2
 
 [node name="rune30" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_adsr6")
+material = SubResource("ShaderMaterial_6icll")
 layout_mode = 2
 
 [node name="rune31" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_n56n3")
+material = SubResource("ShaderMaterial_6tkkd")
 layout_mode = 2
 
 [node name="rune32" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_e4sfm")
+material = SubResource("ShaderMaterial_6wm1c")
 layout_mode = 2
 
 [node name="rune33" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_a3gg4")
+material = SubResource("ShaderMaterial_jo0oe")
 layout_mode = 2
 
 [node name="rune34" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_7yi2c")
+material = SubResource("ShaderMaterial_bjh8i")
 layout_mode = 2
 
 [node name="rune35" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_sqh6q")
+material = SubResource("ShaderMaterial_63fkr")
 layout_mode = 2
 
 [node name="rune36" parent="CenterContainer/runeboard" instance=ExtResource("2_ji5dw")]
-material = SubResource("ShaderMaterial_e6sgj")
+material = SubResource("ShaderMaterial_wspq3")
 layout_mode = 2
