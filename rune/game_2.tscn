@@ -1,0 +1,129 @@
+[gd_scene load_steps=7 format=3 uid="uid://dxfoel724rc3a"]
+
+[ext_resource type="PackedScene" uid="uid://cg6coo54p0qxs" path="res://rune/runestone.tscn" id="1_e3gw0"]
+[ext_resource type="Texture2D" uid="uid://dfcltwy5mcs58" path="res://rune/rune2.png" id="2_hr6ho"]
+
+[sub_resource type="Shader" id="Shader_r8r42"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform float time = 0.;
+uniform sampler2D rune_m;
+
+uniform vec2 pos1 = vec2(1., 0.);
+uniform vec2 pos2 = vec2(0., 0.);
+
+uniform vec2 resolution;
+#define RATIO (resolution.x/resolution.y)
+
+float circle(in vec2 _uv, in vec2 _pos, in float _radius, in float grad) {
+	vec2 uv = vec2(_uv.x, _uv.y / RATIO);
+	vec2 pos = vec2(_pos.x, _pos.y / RATIO);
+    float l = length(uv - pos);
+	if (abs(grad - 0.) < 0.0001) {
+		return step(l, _radius);
+	} else {
+		return smoothstep(l  ,l + grad, _radius);
+	}  
+}
+
+float easeOutExpo(float x) {
+	return 1. - pow(2., -10. * x);
+}
+
+void fragment() {
+	vec4 c = texture(TEXTURE, UV);
+	
+	vec2 center = UV - 0.5;
+	float max_time = .5;
+	float progress = clamp(time / max_time, 0., 1.);
+	vec2 pos = mix(pos1, pos2, easeOutExpo(progress));
+	float inner = circle(center + (0.002 * vec2(sin(time), cos(time))), pos, 0.165, 0.01);
+	float outer =  circle(center - (0.001 * vec2(sin(time), cos(time))), pos, 0.2, 0.01);
+	c = mix(c, texture(rune_m, UV), (inner + outer) / 2.);
+
+	COLOR = c;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o3hwv"]
+resource_local_to_scene = true
+shader = SubResource("Shader_r8r42")
+shader_parameter/time = 0.0
+shader_parameter/pos1 = Vector2(1, 0)
+shader_parameter/pos2 = Vector2(0, 0)
+shader_parameter/resolution = Vector2(180, 180)
+shader_parameter/rune_m = ExtResource("2_hr6ho")
+
+[sub_resource type="Shader" id="Shader_67uvk"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform float time = 0.;
+uniform sampler2D rune_m;
+
+uniform vec2 pos1 = vec2(1., 0.);
+uniform vec2 pos2 = vec2(0., 0.);
+
+uniform vec2 resolution;
+#define RATIO (resolution.x/resolution.y)
+
+float circle(in vec2 _uv, in vec2 _pos, in float _radius, in float grad) {
+	vec2 uv = vec2(_uv.x, _uv.y / RATIO);
+	vec2 pos = vec2(_pos.x, _pos.y / RATIO);
+    float l = length(uv - pos);
+	if (abs(grad - 0.) < 0.0001) {
+		return step(l, _radius);
+	} else {
+		return smoothstep(l  ,l + grad, _radius);
+	}  
+}
+
+float easeOutExpo(float x) {
+	return 1. - pow(2., -10. * x);
+}
+
+void fragment() {
+	vec4 c = texture(TEXTURE, UV);
+	
+	vec2 center = UV - 0.5;
+	float max_time = .5;
+	float progress = clamp(time / max_time, 0., 1.);
+	vec2 pos = mix(pos1, pos2, easeOutExpo(progress));
+	float inner = circle(center + (0.002 * vec2(sin(time), cos(time))), pos, 0.165, 0.01);
+	float outer =  circle(center - (0.001 * vec2(sin(time), cos(time))), pos, 0.2, 0.01);
+	c = mix(c, texture(rune_m, UV), (inner + outer) / 2.);
+
+	COLOR = c;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0uvs6"]
+resource_local_to_scene = true
+shader = SubResource("Shader_67uvk")
+shader_parameter/time = 0.0
+shader_parameter/pos1 = Vector2(1, 0)
+shader_parameter/pos2 = Vector2(0, 0)
+shader_parameter/resolution = Vector2(180, 180)
+shader_parameter/rune_m = ExtResource("2_hr6ho")
+
+[node name="game2" type="Node"]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer"]
+layout_mode = 2
+columns = 4
+
+[node name="runestone" parent="CenterContainer/GridContainer" instance=ExtResource("1_e3gw0")]
+material = SubResource("ShaderMaterial_o3hwv")
+layout_mode = 2
+
+[node name="runestone2" parent="CenterContainer/GridContainer" instance=ExtResource("1_e3gw0")]
+material = SubResource("ShaderMaterial_0uvs6")
+layout_mode = 2

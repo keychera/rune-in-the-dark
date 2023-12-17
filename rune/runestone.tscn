@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://cg6coo54p0qxs"]
+
+[ext_resource type="Shader" path="res://rune/runestone.gdshader" id="1_gfj4j"]
+[ext_resource type="Texture2D" uid="uid://dfcltwy5mcs58" path="res://rune/rune2.png" id="2_boc00"]
+[ext_resource type="Texture2D" uid="uid://bi6ydmfsd08hk" path="res://rune/rune3.png" id="3_dsjbu"]
+[ext_resource type="Script" path="res://rune/Runestone.gd" id="4_rybpx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qatwr"]
+resource_local_to_scene = true
+shader = ExtResource("1_gfj4j")
+shader_parameter/time = 0.0
+shader_parameter/pos1 = Vector2(1, 0)
+shader_parameter/pos2 = Vector2(0, 0)
+shader_parameter/resolution = Vector2(180, 180)
+shader_parameter/rune_m = ExtResource("2_boc00")
+
+[node name="runestone" type="TextureButton"]
+material = SubResource("ShaderMaterial_qatwr")
+custom_minimum_size = Vector2(60, 60)
+texture_normal = ExtResource("3_dsjbu")
+ignore_texture_size = true
+stretch_mode = 3
+script = ExtResource("4_rybpx")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

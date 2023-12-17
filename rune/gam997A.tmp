@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxfoel724rc3a"]
+
+[ext_resource type="Shader" path="res://rune/runestone.gdshader" id="1_nqmeb"]
+[ext_resource type="Texture2D" uid="uid://bi6ydmfsd08hk" path="res://rune/rune3.png" id="2_w6seb"]
+[ext_resource type="Script" path="res://rune/Runestone.gd" id="3_yc66u"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qatwr"]
+shader = ExtResource("1_nqmeb")
+shader_parameter/time = 0.0
+shader_parameter/pos1 = Vector2(1, 0)
+shader_parameter/pos2 = Vector2(0, 0)
+shader_parameter/resolution = null
+
+[node name="game2" type="Node"]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer"]
+layout_mode = 2
+columns = 4
+
+[node name="runestone" type="TextureButton" parent="CenterContainer/GridContainer"]
+material = SubResource("ShaderMaterial_qatwr")
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture_normal = ExtResource("2_w6seb")
+ignore_texture_size = true
+stretch_mode = 3
+script = ExtResource("3_yc66u")
+debug = null
+
+[connection signal="mouse_entered" from="CenterContainer/GridContainer/runestone" to="CenterContainer/GridContainer/runestone" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CenterContainer/GridContainer/runestone" to="CenterContainer/GridContainer/runestone" method="_on_mouse_exited"]
