@@ -1,3 +1,4 @@
+@tool
 extends TextureButton
 class_name Runestone
 
@@ -11,6 +12,7 @@ class_name Runestone
 
 func _process(delta):
 	mat.set_shader_parameter("time", mat.get_shader_parameter("time") + delta)
+	mat.set_shader_parameter("mouse", get_local_mouse_position())
 
 func _on_button_up():
 	active = !active
