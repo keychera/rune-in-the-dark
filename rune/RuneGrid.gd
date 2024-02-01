@@ -4,7 +4,7 @@ const symbols : Array = [1, 2, 3, 4, 5, 6, 7, 8]
 const RUNE = preload("res://rune/runestone.tscn")
 
 func _ready():
-	prepare_game(16)
+	prepare_game(32)
 
 func prepare_game(n_child):
 	var rune_idxs = range(n_child)
@@ -35,6 +35,7 @@ func _modify_dark_grid():
 	dark_grid.size.y += 8
 	dark_grid.position = position
 	dark_grid.position.y -= 4
+	dark_grid.mat.set_shader_parameter("resolution", dark_grid.size)
 	
 var prev: Runestone = null
 

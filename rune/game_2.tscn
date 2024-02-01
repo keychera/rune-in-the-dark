@@ -9,7 +9,7 @@ shader = ExtResource("1_5afsg")
 shader_parameter/color = Color(0.588235, 0.909804, 0.992157, 1)
 shader_parameter/radius = 0.3
 shader_parameter/resolution = Vector2(188, 188)
-shader_parameter/mouse = Vector2(722.22, -477.292)
+shader_parameter/mouse = Vector2(-326.525, -12.3638)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s1n0d"]
 bg_color = Color(0.0658316, 0.0851615, 0.172426, 1)
