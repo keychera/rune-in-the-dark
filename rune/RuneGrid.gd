@@ -1,14 +1,21 @@
 extends GridContainer
 
 const symbols : Array = [1, 2, 3, 4, 5, 6, 7, 8]
+const RUNE = preload("res://rune/runestone.tscn")
 
 func _ready():
-	var n_child = get_child_count()
-	assert(n_child % 2 == 0)
+	prepare_game(16)
+
+func prepare_game(n_child):
 	var rune_idxs = range(n_child)
 	rune_idxs.shuffle()
 	var symbol_idxs = range(symbols.size())
 	symbol_idxs.shuffle()
+	
+	for n in n_child: # different loop so it sets the first sprite order first in the scene (I will not understand this sentence in the future)
+		var rune = RUNE.instantiate().duplicate()
+		add_child(rune)
+		
 	for n in n_child:
 		var idx = rune_idxs[n]
 		var rune = get_child(idx) as Runestone
@@ -16,7 +23,10 @@ func _ready():
 		var rand_symbol = symbols[symbol_idxs[symbol_n % symbols.size()]]
 		rune.order = idx
 		rune.set_symbol(rand_symbol)
+		rune.toggle_active(false)
+		rune.toggle_done(false)
 		rune.button_up.connect(_on_rune_click.bind(rune))
+		
 
 func _modify_dark_grid():
 	var dark_grid = get_node("/root/game2/dark_grid")
